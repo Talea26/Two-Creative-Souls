@@ -1,0 +1,274 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+  background-color: #d39ebd;
+  color: #ffffff;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(104, 51, 90, 0.746);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  gap: 4rem;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: #5c244d;
+  border-radius: 5px;
+}
+
+/* Header */
+.hero {
+  height: 100vh;
+  background: url("/img/hintergrund.jpg") no-repeat center center/cover;
+  display: flex;
+  font-size: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: #5c244d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #7a3a5c;
+}
+
+/*Über uns*/
+.about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.about p {
+  max-width: 850px;
+  margin-bottom: 1rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.about h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about img {
+  display: block;
+  margin: 0 auto 25px;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/*Sektionen*/
+.section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section#gallery {
+  background-color: #edd8d8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features .feature-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature-box img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.feature-box h3 {
+  margin-top: 2rem;
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 20px 15px;
+  }
+}
+
+/* Galerie  */
+
+.gallery {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 40px;
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-container img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 4px solid white;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Kontaktformular */
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.contact {
+  max-width: 600px;
+  width:100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Varela Round", sans-serif;
+}
+
+.about,
+.gallery,
+.contact {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 50px auto;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .contact {
+    max-width: 100%;
+  }
+}
